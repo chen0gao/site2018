@@ -21,28 +21,31 @@ for(i = 0; i<loadbtn.length;i++) {
 }
 
 var projectText = document.querySelectorAll("#projectFilterTab li"),
-    showCase = document.querySelector(".projectShowCase"),
-    scr = ['https://drive.google.com/file/d/1v-dqtOlqEPEYfmCciKEyrmrlkxEhMUNF/preview', //Streamline
-           'https://drive.google.com/file/d/1wlyCr7fvZLV_60nRVq9DTQtRmyNhiVHn/preview', //Engineering Drawing
-           'https://drive.google.com/file/d/1H9wTDOdPV-E6CvQ-tnXT3w3KwKs0Qr8g/preview', //Matlab
+    showCase = document.querySelector(".projectShowCase"), 
+    scr = [
+		   'https://drive.google.com/file/d/1Pi419pQLbRTdXjmnRGexdI4eyIvEYDCd/preview', //Project
+           'https://drive.google.com/file/d/1bpp0YBhxEnAYm5U7V841qbeC2Z_4Uq_j/preview', //Engineering
+           'https://drive.google.com/file/d/1XwCcGgR-LVrnB1cCPlax5Xb6Wn0qUYv1/preview', //MatlabDrawing
+		   'https://drive.google.com/file/d/1QEFSNWpDiUTn4F6mb-qNgdEKbDrxnxHe/preview', //Streamline
            'https://drive.google.com/file/d/1RQZg927AYi3HJ4gx4j0g6J1wHafL97kL/preview' //Default
           
           ],
-    desc = ['A Collection of SolidWorks model throughout my College courses.',
+    desc = [
+//			'A Collection of SolidWorks model throughout my College courses, which including basic usage of line drawing, 3D drawing, extrusion, split line...',
             'A Finite Element Analysis project completed with my team. We first create the model duplication of our Wall Shelf. Then analyze several different force distribution on the interested areas.',
             'A Collection of Engineering Drawing throughout my College courses.',
-            'A Claw Gripper designed and manufactured with my team. We created the mechancial structure of the claw using SolidWorks. Then estimated the material costs within the given budget. Lastly, we manufactured the physical model using CNC machine and 3D printer.',
+//            'A Claw Gripper designed and manufactured with my team. We created the mechancial structure of the claw using SolidWorks. Then estimated the material costs within the given budget. Lastly, we manufactured the physical model using CNC machine and 3D printer.',
             
-            'A Collection of Matlab Programs throughout my College courses.',
+            'A Collection of Matlab Programs throughout my College courses. Including',
             'A Matlab Program would be able to calculate and draw the streamline pattern around a rotating cylinder in the presence of free stream velocity, based on user input.',
-            
-            'The academic websites that my team created for CCNY OER courses. Those websites included syllabus, textbook and all other essential contents that students needed.',
-            'The biology simulations that my team created for a biology course. This simulation had completed UI for allowing student to interactive animation. The questions were also included for students to answer.',
-            'The academic exhibits that my team created for CCNY library. Which had different features and displaying layout for serving different purpose.',
-            
-            'The ANSYS Fluent anlysis reports created for my aerodynamics course.',
-            
-            'The C++ Assignment that I coded for my course.'
+//            
+//            'The academic websites that my team created for CCNY OER courses. Those websites included syllabus, textbook and all other essential contents that students needed.',
+//            'The biology simulations that my team created for a biology course. This simulation had completed UI for allowing student to interactive animation. The questions were also included for students to answer.',
+//            'The academic exhibits that my team created for CCNY library. Which had different features and displaying layout for serving different purpose.',
+//            
+//            'The ANSYS Fluent anlysis reports created for my aerodynamics course. Including basic usage of Fluent plottig for air foil, which simulation force and pressure flow near the air foil.',
+//            
+//            'The C++ Assignment that I coded for my course. Including basic function of ...'
            ]
 
 for(i = 0; i<projectText.length;i++) {
@@ -50,7 +53,7 @@ for(i = 0; i<projectText.length;i++) {
         projectText[i].onclick = function(){
             if(!showCase.classList.contains("showCaseOpen") );
             showCase.classList.add("showCaseOpen");
-            showCase.innerHTML = "<div id='showCaseTitle'>"+projectText[i].textContent+"</div><div id='showCaseDesc'>"+desc[i]+"</div><iframe src='"+scr[3]+"'></iframe>"
+            showCase.innerHTML = "<div class='showCaseTitle'>"+projectText[i].textContent+"</div><div class='showCaseDesc'>"+desc[i]+"</div><iframe src='"+scr[i]+"'></iframe>"
 
         }
     }(i))
